@@ -72,7 +72,7 @@ def baseplot(spacing, plotname):
             horizontalalignment='right')
     plt.text(
         -0.7,
-        0.2,
+        0.5,
      'B axis plunge',
      fontsize=9,
      horizontalalignment='center',
@@ -98,7 +98,7 @@ def baseplot(spacing, plotname):
             horizontalalignment='left')
     plt.text(
         0.7,
-        0.2,
+        0.5,
      'T axis plunge',
      fontsize=9,
      horizontalalignment='center',
@@ -167,7 +167,6 @@ def baseplot(spacing, plotname):
 
     return fig
 
-
 def circles(X, Y, size, color, plotname, label, spacing):
 
     fig = baseplot(spacing, plotname)
@@ -178,7 +177,7 @@ def circles(X, Y, size, color, plotname, label, spacing):
             X,
             Y,
             s=size,
-            c=color, # AQUI HAY UN PROBLEMA AL UTILIZAR NUMEROS EN ID PARA COLOREAR PROBLEMA EN LA FUNCION COLOR DE matplotlib 3
+            c=color,
             alpha=0.7,
             linewidth=1.5,
 			edgecolors='black',
@@ -200,7 +199,6 @@ def circles(X, Y, size, color, plotname, label, spacing):
     plt.text(0.8, .95, '9', fontsize=10)
     plt.text(0.85, .95, 'Mw', fontsize=10)
     return fig
-
 
 def annot(X, Y, size, color, plotname, label, annots, lab_param, spacing):
 
@@ -227,7 +225,6 @@ def annot(X, Y, size, color, plotname, label, annots, lab_param, spacing):
                  verticalalignment='top')
 
     return fig
-
 
 def grids(spacing, plotname):
     for sp in range(0, 91, spacing):
